@@ -11,3 +11,5 @@ const limparFormulario = () => {
     document.getElementById('estado').value = '';
 }
  
+// VERIFICA SE O CEP É VÁLIDO
+const eNumero = (numero) => /^[0-9]+$/.test(numero);
