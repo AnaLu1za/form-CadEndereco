@@ -13,3 +13,7 @@ const limparFormulario = () => {
  
 // VERIFICA SE O CEP É VÁLIDO
 const eNumero = (numero) => /^[0-9]+$/.test(numero);
+
+// VERIFICA O TAMANHO DO CEP
+const cepValido = (cep) => cep.length == 8 &&
+eNumero(cep);
