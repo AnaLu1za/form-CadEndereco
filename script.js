@@ -5,10 +5,10 @@
 
 // LIMPAR CONSULTA DO FORM JÁ REALIZADA
 const limparFormulario = () => {
-    document.getElementById('rua').value= '';
+    document.getElementById('logradouro').value= '';
     document.getElementById('bairro').value = '';
-    document.getElementById('cidade').value = '';
-    document.getElementById('estado').value = '';
+    document.getElementById('localidade').value = '';
+    document.getElementById('uf').value = '';
 }
  
 // VERIFICA SE O CEP É VÁLIDO
@@ -20,8 +20,8 @@ eNumero(cep);
 
 // FUNÇÃO PARA PREENCHER CAMPOS RELACIONADOS AO CEP
 const preencherFormulario = (endereco) => {
-    document.getElementById('rua').value = endereco.logradouro;//COLOCA O VALOR DE LOGRADOURO DA API DENTRO DO CAMPO LOGRADOURO DO FORMULARIO
+    document.getElementById('logradouro').value = endereco.logradouro;//COLOCA O VALOR DE LOGRADOURO DA API DENTRO DO CAMPO LOGRADOURO DO FORMULARIO
     document.getElementById('bairro').value = endereco.bairro
-    document.getElementById('cidade').value = endereco.localidade;
-    document.getElementById('estado').value = endereco.uf;
+    document.getElementById('localidade').value = endereco.localidade;
+    document.getElementById('uf').value = endereco.uf;
 }
