@@ -1,9 +1,9 @@
-'use strict'// ATIVA O MODO RESTRITO
+'use strict'// Ativa o modo restrito
 
-//CODIGO PARA CONSUMO DE API DE VIA CEP
+//Código para consumo de API na ViaCEP
 //https://viacep.com.br/
 
-// LIMPAR CONSULTA DO FORM JÁ REALIZADA
+// Limpa consulta do form já realizada 
 const limparFormulario = () => {
     document.getElementById('logradouro').value= '';
     document.getElementById('bairro').value = '';
@@ -11,17 +11,39 @@ const limparFormulario = () => {
     document.getElementById('uf').value = '';
 }
  
-// VERIFICA SE O CEP É VÁLIDO
+// Verifica se o CEP é valido 
 const eNumero = (numero) => /^[0-9]+$/.test(numero);
 
-// VERIFICA O TAMANHO DO CEP
+// Verifica o tamanho do CEP
 const cepValido = (cep) => cep.length == 8 &&
 eNumero(cep);
 
-// FUNÇÃO PARA PREENCHER CAMPOS RELACIONADOS AO CEP
-const preencherFormulario = (endereco) => {
-    document.getElementById('logradouro').value = endereco.logradouro;//COLOCA O VALOR DE LOGRADOURO DA API DENTRO DO CAMPO LOGRADOURO DO FORMULARIO
+// Função para preencher campos relacionados ao CEP
+const preencherFormulario = (endereco) => {                                
+    document.getElementById('logradouro').value = endereco.logradouro;//Coloca o valor de logradouro da API dentro do campo logradouro do formulário 
     document.getElementById('bairro').value = endereco.bairro
     document.getElementById('localidade').value = endereco.localidade;
     document.getElementById('uf').value = endereco.uf;
 }
+
+// Função para consumo de API ViaCEP
+// Necessário comentar as funcionalidades detalhadamente com o máximo de rigor possível
+const pesquisarCep = async() => { 
+    limparFormulario();
+    const url = `http://viacep.com.br/ws/${cep.value}/json/`;
+    if (cepValido(cep.value)){
+        const dados = await fetch(url);
+        const addres = await dados.json();
+
+        if(addres.hasOwnProperty('erro')){
+            alert('CEP não encontrado');
+        }else{
+            preencherFormulario(addres);
+        }
+    }else{
+        alert('CEP incorreto');
+    }
+}
+
+// Executa a ação de preenchimento do formulário ao deixar o campo do CEP
+document.getElementById('cep').addEventListener('focusout', pesquisarCep);
