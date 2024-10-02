@@ -5,28 +5,63 @@
 * [Funcionalidades](#funcionalidades)
 * [Lógica do código](#lógica-do-código)
 * [Recursos de JavaScript utilizados](#recursos-de-javascript-utilizados)
-* [Melhorias feitas](#melhorias-feitas)
 * [Técnicas e tecnologias utilizadas](#técnicas-e-tecnologias-utilizadas)
 * [Fontes Consultadas](#fontes-consultadas)
 
 
 ## Introdução
+Este código JavaScript oferece uma funcionalidade completa para consulta de endereços a partir de um CEP (Código de Endereçamento Postal) brasileiro, utilizando a API do ViaCEP. Ele automatiza o processo de preenchimento de um formulário com as informações obtidas da API, proporcionando uma experiência mais fluida para o usuário.
 
-
-![]()
+![cep](/img/cep.gif)
 
 
 
 ![]()
 
 ## Funcionalidades
+    O código JavaScript apresentado tem como objetivo principal automatizar a busca e preenchimento de informações de endereços a partir de um CEP (Código de Endereçamento Postal) brasileiro, utilizando a API do ViaCEP.
+
+
+**Interface com o Usuário:**
+
+    - O código interage com o usuário através de um formulário HTML, onde o usuário insere o CEP desejado.
+    - Ao sair do campo de CEP (evento focusout), a função pesquisarCep() é acionada.
+
+**Validação do CEP:**
+
+    - A função pesquisarCep() verifica se o CEP inserido possui 8 dígitos numéricos.
+    - Caso o CEP seja inválido, uma mensagem de alerta é exibida para o usuário.
+
+**Consulta à API do ViaCEP:**
+
+    - Se o CEP for válido, uma requisição HTTP é feita para a API do ViaCEP, que é um serviço gratuito que fornece informações sobre endereços a partir de CEPs brasileiros.
+    - A URL da requisição é construída concatenando a URL base da API com o CEP informado.
+
+**Tratamento da Resposta:**
+
+A resposta da API, que é um objeto JSON, é analisada:
+
+    - **CEP não encontrado:** Se a propriedade erro estiver presente no objeto JSON, significa que o CEP não foi encontrado e uma mensagem de alerta é exibida para o usuário.
+    - **CEP encontrado:** Caso contrário, as informações do endereço (logradouro, bairro, localidade e UF) são extraídas do objeto JSON e preenchidas nos campos correspondentes do formulário.
 
 <br>
 
 
-
 ## Lógica do código
+![limparFormulario](/img/limparFormulario.png)
+- ``'use strict';:`` Essa linha ativa o modo restrito do JavaScript, tornando o código mais seguro e evitando erros comuns.
+<br>
 
+``const limparFormulario = () => { ... }:``
+- ``const:`` Declara uma constante chamada limparFormulario.
+- ``= () => { ... }:`` Define uma função anônima (arrow function) que será atribuída à constante.
+
+<br>
+
+``document.getElementById('logradouro').value= '';:``
+- ``document.getElementById('logradouro'):`` Seleciona o elemento HTML com o ID 'logradouro' (provavelmente um input).
+- ``.value = '';:`` Atribui uma string vazia ao valor desse elemento, limpando o campo.
+As outras linhas fazem o mesmo para os elementos 'bairro', 'localidade' e 'uf'.
 
 ![miau.gif](https://steemitimages.com/DQmZCo76MUSeg8WNYUqr9UMGig3kufJWfENY337KfSbpoJC/miau.gif)
 
