@@ -65,6 +65,8 @@ As outras linhas fazem o mesmo para os elementos 'bairro', 'localidade' e 'uf'.
 
 ## Validação de CEP 
 ![validação de cep](img/validação%20de%20cep.png)
+<br>
+
 ``const eNumero = (numero) => /^[0-9]+$/.test(numero);``: Verifica se uma string contém apenas números.
 - ``^ e $``: Esses caracteres garantem que a expressão regular corresponda à string inteira, do início ao fim.
 - ``[0-9]+``: Essa parte da expressão define um conjunto de caracteres que vão de 0 a 9 e o quantificador ``+`` indica que pode haver um ou mais desses dígitos.
