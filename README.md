@@ -1,4 +1,10 @@
 # Projeto de validação de e-mail e CPF com JavaScript 
+## Introdução
+Este código JavaScript oferece uma funcionalidade completa para consulta de endereços a partir de um CEP (Código de Endereçamento Postal) brasileiro, utilizando a API do ViaCEP. Ele automatiza o processo de preenchimento de um formulário com as informações obtidas da API, proporcionando uma experiência mais fluida para o usuário.
+
+![cep](/img/cep.gif)
+<br>
+
 
 ## Índice
 * [Introdução](#introdução)
@@ -7,12 +13,6 @@
 * [Técnicas e tecnologias utilizadas](#técnicas-e-tecnologias-utilizadas)
 * [Fontes Consultadas](#fontes-consultadas)
 * [Autor(a)](#autora)
-
-## Introdução
-Este código JavaScript oferece uma funcionalidade completa para consulta de endereços a partir de um CEP (Código de Endereçamento Postal) brasileiro, utilizando a API do ViaCEP. Ele automatiza o processo de preenchimento de um formulário com as informações obtidas da API, proporcionando uma experiência mais fluida para o usuário.
-
-![cep](/img/cep.gif)
-<br>
 
 ## Funcionalidades
 O código JavaScript apresentado tem como objetivo principal automatizar a busca e preenchimento de informações de endereços a partir de um CEP (Código de Endereçamento Postal) brasileiro, utilizando a API do ViaCEP.
