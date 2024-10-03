@@ -46,7 +46,8 @@ A resposta da API, que é um objeto JSON, é analisada:
 # Lógica do código
 ## Função limparFormulario
 ![limparFormulario](img/limparFormulario.png)
-``'use strict';``: Essa linha ativa o modo restrito do JavaScript, tornando o código mais seguro e evitando erros comuns.
+
+- ``'use strict';``: Essa linha ativa o modo restrito do JavaScript, tornando o código mais seguro e evitando erros comuns.
 <br>
 
 ``const limparFormulario = () => { ... }``:
@@ -154,11 +155,11 @@ Este código JavaScript estabelece uma conexão entre o campo de entrada do CEP 
 * [<code><img height="32" src="https://blog.netscandigital.com/wp-content/uploads/2023/07/O-que-e-o-Google-Bard.png" alt="Bard"/></code>](https://bard.google.com/chat?hl=pt)
 * [<code><img height="32" src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="VisualStudio"/></code>](https://code.visualstudio.com/)
 * [<code><img height="32" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></code>](https://github.com/)
+* [<code><img height="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" alt="Bootstrap v5.0"/></code>](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 
 
 ## Fontes consultadas 
 * [Alura - Como escrever um bom README.md](https://www.alura.com.br/artigos/escrever-bom-readme)
-* [Bootstrap](https://getbootstrap.com/docs/5.3/forms/checks-radios/#radios)
 * [Alura - Tipos de type](https://cursos.alura.com.br/forum/topico-type-do-campo-telefone-104370)
 * [Dio](https://www.dio.me/articles/tutorial-criando-um-readme-bonitao-para-o-seu-github)
 * [Progamador alternativo - Youtube](https://youtu.be/HJ16WEmOWTw?si=UFvCAtBHbuCc08Hu)
