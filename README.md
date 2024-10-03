@@ -46,8 +46,6 @@ A resposta da API, que é um objeto JSON, é analisada:
 # Lógica do código
 ## Função limparFormulario
 ![limparFormulario](img/limparFormulario.png)
-<br>
-
 ``'use strict';``: Essa linha ativa o modo restrito do JavaScript, tornando o código mais seguro e evitando erros comuns.
 <br>
 
@@ -143,6 +141,8 @@ Este código JavaScript estabelece uma conexão entre o campo de entrada do CEP 
 - ``.addEventListener():`` Este método é utilizado para adicionar um "ouvinte de eventos" a um elemento HTML. Quando um evento específico ocorre nesse elemento, a função associada é executada.
 - ``'focusout':`` Este é o evento que estamos monitorando. O evento focusout ocorre quando um elemento perde o foco, ou seja, quando o usuário clica fora do campo de entrada do CEP.
 - ``pesquisarCep:`` É o nome da função que será executada quando o evento focusout ocorrer. Nessa função, como vimos anteriormente, a API do ViaCEP é consultada para obter as informações do endereço e preencher o formulário.
+<br>
+
 ![miau.gif](https://steemitimages.com/DQmZCo76MUSeg8WNYUqr9UMGig3kufJWfENY337KfSbpoJC/miau.gif)
 
 
